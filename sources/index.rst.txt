@@ -15,6 +15,11 @@
 .. role:: python(code)
     :language: python
 
+
+.. figure:: figures/favicon.png
+   :width: 100px
+   :align: left
+
 Welcome to the documentation of FANFARE!
 ========================================
 

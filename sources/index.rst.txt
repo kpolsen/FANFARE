@@ -34,7 +34,11 @@ The purpose of this code, is to quantify the need for flexibility in a system wi
    :width: 500px
    :align: center
 
-In order to disentangle the residual load on different timescales, FANFARE adopts a Discrete Fourier Transform (DFT) analysis. This has often been done before in power system analysis - see for instance [Frunt et al. 2010](), [Arrigo et al. 2017](https://www.tib.eu/en/search/id/ieee%3Adoi~10.1109%252FISGTEurope.2017.8260312/Fourier-transform-based-procedure-for-investigations/), [Oh 2018](https://www.sciencedirect.com/science/article/pii/S0960148117309904) and [Heggarty et al. 2019](https://www.sciencedirect.com/science/article/pii/S0306261919302107).
+In order to disentangle the residual load on different timescales, FANFARE adopts a Discrete Fourier Transform (DFT) analysis. This has often been done before in power system analysis - see for instance 
+
+`Arrigo et al. 2017 <https://www.tib.eu/en/search/id/ieee%3Adoi~10.1109%252FISGTEurope.2017.8260312/Fourier-transform-based-procedure-for-investigations/>`_
+
+[Oh 2018](https://www.sciencedirect.com/science/article/pii/S0960148117309904) and [Heggarty et al. 2019](https://www.sciencedirect.com/science/article/pii/S0306261919302107).
 
 FANFARE consists of a set of methods that can be applied to timeseries data of residual load, in order to study the flexibility requirements on different timescales. 
 These methods are illustrated in the flow chart below.

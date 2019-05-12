@@ -32,7 +32,7 @@ def handle_args(kwargs,argkeys_needed,verbose=False):
                             comp_dev=50,\
                             cons_ob='',\
 
-                            d_data='../../data/',\
+                            d_data='data/',\
                             data_df=False,\
                             data_type=False,\
                             depth = False,\

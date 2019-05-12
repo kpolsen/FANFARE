@@ -53,6 +53,7 @@ def handle_args(kwargs,argkeys_needed,verbose=False):
                             freq_cuts=[False],\
                             
                             histogram_values = [],\
+                            histo_counts = False,\
 
                             include_storms = False,\
                             int_power = [],\
@@ -61,6 +62,7 @@ def handle_args(kwargs,argkeys_needed,verbose=False):
                             labels=False,\
                             legend=False,\
                             load=False,\
+                            load_name=False,\
                             load_names=[],\
                             log=False,\
                             line_limit=80000,\
@@ -79,6 +81,8 @@ def handle_args(kwargs,argkeys_needed,verbose=False):
 
                             offset = 10,\
                             offsets = [1,2,3,4],\
+                            overwrite = False,\
+
                             percent = 95,
                             power_name='TotalWindPower',\
                             power_names=[],\

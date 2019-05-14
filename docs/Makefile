@@ -3,10 +3,10 @@
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
+SPHINXBUILD   = /home/karen/code/anaconda2/bin/sphinx-build
 SPHINXPROJ    = FANFARE
 SOURCEDIR     = .
-BUILDDIR      = _build
+BUILDDIR      = /home/karen/Projects/EPIMES/python/fanfare-docs
 
 # Put it first so that "make" without argument is like "make help".
 help:

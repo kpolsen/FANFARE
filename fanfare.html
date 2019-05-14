@@ -159,6 +159,23 @@
 <dt id="source.power_class.PowerData">
 <em class="property">class </em><code class="descclassname">source.power_class.</code><code class="descname">PowerData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData" title="Permalink to this definition">¶</a></dt>
 <dd><p>This class defines an object that contains the hourly power system timeseries data to be used</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data_type</strong> (<em>str/bool</em>) – type of data, ‘energinet’ for loading Energinet data, default : False</li>
+<li><strong>load</strong> (<em>bool</em>) – if True, load data previously stored as pandas dataframe, if False, download data from url site, default : False</li>
+<li><strong>year</strong> (<em>str/bool</em>) – year to cut out of data, default: False</li>
+<li><strong>time_cut</strong> (<em>list</em>) – start and endtime in np.datetime64-readable format, default: False</li>
+<li><strong>d_data</strong> (<em>str</em>) – path to where data will be stored, default: ‘data/’</li>
+<li><strong>file_name</strong> (<em>str/bool</em>) – file name used to load/save dataset as pandas dataframe, default: False</li>
+<li><strong>line_limit</strong> (<em>int</em>) – max number of lines to read from url site, default: 5</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="source.power_class.PowerData.info">
 <code class="descname">info</code><span class="sig-paren">(</span><em>verbose=True</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.info" title="Permalink to this definition">¶</a></dt>
@@ -257,7 +274,20 @@ and inserts it back into dataframe data_df.</p>
 <dl class="function">
 <dt id="source.aux.handle_args">
 <code class="descclassname">source.aux.</code><code class="descname">handle_args</code><span class="sig-paren">(</span><em>kwargs</em>, <em>argkeys_needed</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#source.aux.handle_args" title="Permalink to this definition">¶</a></dt>
-<dd><p>Make custom namespace for specific method</p>
+<dd><p>Make custom namespace containing the relevant parameters for a specific method</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>kwargs</strong> (<em>dictionary</em>) – keyword arguments supplied to the function by the user</li>
+<li><strong>args_needed</strong> (<em>dictionary</em>) – arguments needed by the function</li>
+<li><strong>verbose</strong> (<em>bool</em>) – print which arguments were not supplied by user and have been replaced by default value, default: False</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>

@@ -84,6 +84,9 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#creating-a-new-dataset">0. Creating a new dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hourly-share-of-vre-in-dataset">1. Hourly share of VRE in dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i-oscillation-analysis-of-residual-load">2. i) Oscillation analysis of residual load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ii-power-requirements-from-dft-analysis">3. ii) Power requirements from DFT analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iii-storage-capacity-requirements-from-dft-analysis">4. iii) Storage capacity requirements from DFT analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -156,10 +159,52 @@
 <div class="section" id="creating-a-new-dataset">
 <h2>0. Creating a new dataset<a class="headerlink" href="#creating-a-new-dataset" title="Permalink to this headline">¶</a></h2>
 <p>See the notebook <code class="code python docutils literal notranslate"><span class="name"><span class="pre">Tutorial</span></span> <span class="literal number integer"><span class="pre">0</span></span> <span class="operator"><span class="pre">-</span></span> <span class="name"><span class="pre">Creating</span></span> <span class="name"><span class="pre">a</span></span> <span class="name"><span class="pre">new</span></span> <span class="name"><span class="pre">dataset</span></span><span class="operator"><span class="pre">.</span></span><span class="name"><span class="pre">ipynb</span></span></code></p>
+<p>By going through the steps in this notebook, you should be able to generate the following plot with data from energidataservice.dk (Energinet data):</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="images/timeseries.png"><img alt="images/timeseries.png" src="images/timeseries.png" style="width: 500px;" /></a>
+</div>
 </div>
 <div class="section" id="hourly-share-of-vre-in-dataset">
 <h2>1. Hourly share of VRE in dataset<a class="headerlink" href="#hourly-share-of-vre-in-dataset" title="Permalink to this headline">¶</a></h2>
 <p>See the notebook <code class="code python docutils literal notranslate"><span class="name"><span class="pre">Tutorial</span></span> <span class="literal number integer"><span class="pre">1</span></span> <span class="operator"><span class="pre">-</span></span> <span class="name"><span class="pre">Hourly</span></span> <span class="name"><span class="pre">share</span></span> <span class="name"><span class="pre">of</span></span> <span class="name"><span class="pre">VRE</span></span> <span class="operator word"><span class="pre">in</span></span> <span class="name"><span class="pre">dataset</span></span><span class="operator"><span class="pre">.</span></span><span class="name"><span class="pre">ipynb</span></span></code></p>
+<p>In this notebook, the hourly share of VRE is calculated for a specified region.
+After calculating the VRE share, a histogram can be created to compare different regions:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="images/VRE_hourly_share.png"><img alt="images/VRE_hourly_share.png" src="images/VRE_hourly_share.png" style="width: 500px;" /></a>
+</div>
+</div>
+<div class="section" id="i-oscillation-analysis-of-residual-load">
+<h2>2. i) Oscillation analysis of residual load<a class="headerlink" href="#i-oscillation-analysis-of-residual-load" title="Permalink to this headline">¶</a></h2>
+<p>See the notebook <code class="code python docutils literal notranslate"><span class="name"><span class="pre">Tutorial</span></span> <span class="literal number integer"><span class="pre">2</span></span> <span class="operator"><span class="pre">-</span></span>&#160; <span class="name"><span class="pre">i</span></span><span class="punctuation"><span class="pre">)</span></span> <span class="name"><span class="pre">Oscillation</span></span> <span class="name"><span class="pre">analysis</span></span> <span class="name"><span class="pre">of</span></span> <span class="name"><span class="pre">residual</span></span> <span class="name"><span class="pre">load</span></span><span class="operator"><span class="pre">.</span></span><span class="name"><span class="pre">ipynb</span></span></code></p>
+<p>This is option (i) of the FANFARE method (see frontpage), where the discrete Fourier transform (DFT) is calculated and split into different freqency intervals.
+In this notebook, you get to chose the frequency intervals of interest and make a pie chart displaying the energy stored in each interval:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="images/pie_chart_DK.png"><img alt="images/pie_chart_DK.png" src="images/pie_chart_DK.png" style="width: 500px;" /></a>
+</div>
+</div>
+<div class="section" id="ii-power-requirements-from-dft-analysis">
+<h2>3. ii) Power requirements from DFT analysis<a class="headerlink" href="#ii-power-requirements-from-dft-analysis" title="Permalink to this headline">¶</a></h2>
+<p>See the notebook <code class="code python docutils literal notranslate"><span class="name"><span class="pre">Tutorial</span></span> <span class="literal number integer"><span class="pre">3</span></span> <span class="operator"><span class="pre">-</span></span>&#160; <span class="name"><span class="pre">ii</span></span><span class="punctuation"><span class="pre">)</span></span> <span class="name"><span class="pre">Power</span></span> <span class="name"><span class="pre">requirements</span></span> <span class="keyword namespace"><span class="pre">from</span></span> <span class="name namespace"><span class="pre">DFT</span></span> <span class="name namespace"><span class="pre">analysis.ipynb</span></span></code></p>
+<p>This is option (ii) of the FANFARE method (see frontpage), where the discrete Fourier transform (DFT) is calculated and split into different freqency intervals.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="images/power_req_DK_2018.png"><img alt="images/power_req_DK_2018.png" src="images/power_req_DK_2018.png" style="width: 500px;" /></a>
+</div>
+</div>
+<div class="section" id="iii-storage-capacity-requirements-from-dft-analysis">
+<h2>4. iii) Storage capacity requirements from DFT analysis<a class="headerlink" href="#iii-storage-capacity-requirements-from-dft-analysis" title="Permalink to this headline">¶</a></h2>
+<p>See the notebook <code class="code python docutils literal notranslate"><span class="name"><span class="pre">Tutorial</span></span> <span class="literal number integer"><span class="pre">4</span></span> <span class="operator"><span class="pre">-</span></span>&#160; <span class="name"><span class="pre">iii</span></span><span class="punctuation"><span class="pre">)</span></span> <span class="name"><span class="pre">Storage</span></span> <span class="name"><span class="pre">capacity</span></span> <span class="name"><span class="pre">requirements</span></span> <span class="keyword namespace"><span class="pre">from</span></span> <span class="name namespace"><span class="pre">DFT</span></span> <span class="name namespace"><span class="pre">analysis.ipynb</span></span></code></p>
+<p>This is option (iii) of the FANFARE method (see frontpage), where the discrete Fourier transform (DFT) is calculated and split into different freqency intervals.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">Capacity</span> <span class="pre">requirements:</span>
+<span class="pre">For</span> <span class="pre">frequency</span> <span class="pre">cut</span> <span class="pre">#0:</span> <span class="pre">1.89e+00</span> <span class="pre">GWh</span>
+<span class="pre">For</span> <span class="pre">frequency</span> <span class="pre">cut</span> <span class="pre">#1:</span> <span class="pre">2.11e+01</span> <span class="pre">GWh</span>
+<span class="pre">For</span> <span class="pre">frequency</span> <span class="pre">cut</span> <span class="pre">#2:</span> <span class="pre">1.18e+02</span> <span class="pre">GWh</span>
+<span class="pre">For</span> <span class="pre">frequency</span> <span class="pre">cut</span> <span class="pre">#3:</span> <span class="pre">4.20e+02</span> <span class="pre">GWh</span>
+<span class="pre">For</span> <span class="pre">frequency</span> <span class="pre">cut</span> <span class="pre">#4:</span> <span class="pre">8.27e+02</span> <span class="pre">GWh</span>
+<span class="pre">`</span></code></p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="images/pie_chart_DK.png"><img alt="images/pie_chart_DK.png" src="images/pie_chart_DK.png" style="width: 500px;" /></a>
+</div>
 </div>
 </div>
 

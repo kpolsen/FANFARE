@@ -178,10 +178,76 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="source.power_class.PowerData.SetFrequencySetup">
+<code class="descname">SetFrequencySetup</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.SetFrequencySetup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derive frequency intervals</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="source.power_class.PowerData.GetFluctuations">
+<code class="descname">GetFluctuations</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.GetFluctuations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates durations and integrated energy of fluctuations within given epoch, returns in dictionary</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cons_ob</strong> (<em>object</em>) – Object containing data of consumption, default: ‘’</li>
+<li><strong>epoch</strong> (<em>int</em>) – Defines which epoch we’re looking at (0 for low wind penetration, 1 for high)</li>
+<li><strong>duration_cuts</strong> (<em>int/float</em>) – The durations [hours] seperating different fluctuations, default: [[0,5],[5,10],[10,50]]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="source.power_class.PowerData.AddFFT">
+<code class="descname">AddFFT</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.AddFFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates Fast Fourier Transform (FFT) for wind power and inserts it back into dataframe data_df. Returns dataframe.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="source.power_class.PowerData.AddiFFT">
+<code class="descname">AddiFFT</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.AddiFFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates inverse Fast Fourier Transform (iFFT) for dataframe data_df
+and inserts it back into dataframe data_df.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="source.power_class.PowerData.GetPowerReqFromiFFT">
+<code class="descname">GetPowerReqFromiFFT</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.GetPowerReqFromiFFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="source.power_class.PowerData.GetCapacityReq">
+<code class="descname">GetCapacityReq</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.GetCapacityReq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate storage needs based on accumulated sum of energy</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="source.power_class.PowerData.PlotHisto">
 <code class="descname">PlotHisto</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotHisto" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot histogram of an attribute, a column in the dataframe or a supplied data array.</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="source.power_class.PowerData.PlotPie">
+<code class="descname">PlotPie</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotPie" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make pie chart of integrated power fractions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="source.power_class.PowerData.PlotTimeSeries">
+<code class="descname">PlotTimeSeries</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotTimeSeries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots time series of data for specific time period (all times by default).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="source.power_class.PowerData.PlotPowerReqFromiFFT">
+<code class="descname">PlotPowerReqFromiFFT</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotPowerReqFromiFFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

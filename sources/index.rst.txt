@@ -25,6 +25,19 @@ Welcome to the documentation of FANFARE!
 
 FANFARE stands for 'Fast Assessment Numerical tool for Frequency Analysis of Renewable Energy integration scenarios' and can be applied to power system timeseries data of both real and simulated scenarios. 
 
+
+
+Quick example
+-------------
+
+FANFARE reads in a timeseries of electricity production from renewable energy sources together with a timeseries of electricity consumption over the same time period. A Fourier analysis of the residual load is used to derive flexibility requirements, such as the integrated energy stored in oscillations of different timescales:
+
+.. figure:: figures/pie_charts_real.png
+   :width: 500px
+   :align: center
+
+In the above figure, the regions of Bornholm (BO), East Denmark (DK2), West Denmark (DK1) and all of Denmark (DK) are compared.
+
 Purpose
 -------
 

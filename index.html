@@ -15,6 +15,7 @@
   
   
   
+  
 
   
 
@@ -154,6 +155,14 @@
 <div class="section" id="welcome-to-the-documentation-of-fanfare">
 <h1>Welcome to the documentation of FANFARE!<a class="headerlink" href="#welcome-to-the-documentation-of-fanfare" title="Permalink to this headline">¶</a></h1>
 <p>FANFARE stands for ‘Fast Assessment Numerical tool for Frequency Analysis of Renewable Energy integration scenarios’ and can be applied to power system timeseries data of both real and simulated scenarios.</p>
+<div class="section" id="quick-example">
+<h2>Quick example<a class="headerlink" href="#quick-example" title="Permalink to this headline">¶</a></h2>
+<p>FANFARE reads in a timeseries of electricity production from renewable energy sources together with a timeseries of electricity consumption over the same time period. A Fourier analysis of the residual load is used to derive flexibility requirements, such as the integrated energy stored in oscillations of different timescales:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="images/pie_charts_real.png"><img alt="images/pie_charts_real.png" src="images/pie_charts_real.png" style="width: 500px;" /></a>
+</div>
+<p>In the above figure, the regions of Bornholm (BO), East Denmark (DK2), West Denmark (DK1) and all of Denmark (DK) are compared.</p>
+</div>
 <div class="section" id="purpose">
 <h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>The purpose of this code, is to quantify the need for flexibility in a system with significant share of variable renewable energy (VRE) and an offset between electricity consumption and VRE generation. This offset is often called residual load, and it can contain fluctuations on different timescales. In order to handle these fluctuations in a fossil-free future, solutions must be found in terms of energy storage (ES) and demand response (DR). Many of these solutions are already well on their way to being fully implemented, but each typically work on specific timescales, as illustrated for ES in the figure below.</p>

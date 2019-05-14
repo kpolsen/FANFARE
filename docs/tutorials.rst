@@ -34,7 +34,7 @@ After calculating the VRE share, a histogram can be created to compare different
 
 See the notebook :python:`Tutorial 2 -  i) Oscillation analysis of residual load.ipynb`
 
-This is option (i) of the FANFARE method (see frontpage), where the discrete Fourier transform (DFT) is calculated and split into different freqency intervals, 
+This is option (i) of the `FANFARE` method (see frontpage), where the discrete Fourier transform (DFT) is calculated and split into different freqency intervals, 
 and the resulting iDFTs of each interval is integrated. 
 In this notebook, you get to chose the frequency intervals of interest and make a pie chart displaying the energy stored in each interval:
 
@@ -47,7 +47,7 @@ In this notebook, you get to chose the frequency intervals of interest and make 
 
 See the notebook :python:`Tutorial 3 -  ii) Power requirements from DFT analysis.ipynb`
 
-This is option (ii) of the FANFARE method (see frontpage), where the spread in residual load whithin each frequency interval is investigated.
+This is option (ii) of the `FANFARE` method (see frontpage), where the spread in residual load whithin each frequency interval is investigated.
 
 .. figure:: figures/power_req_DK_2018.png
    :width: 700px
@@ -59,7 +59,7 @@ This is option (ii) of the FANFARE method (see frontpage), where the spread in r
 
 See the notebook :python:`Tutorial 4 -  iii) Storage capacity requirements from DFT analysis.ipynb`
 
-This is option (iii) of the FANFARE method (see frontpage), where a cumulative sum of the residual load whithin each frequency interval is used to place requirements on the storage capacity for those timescales.
+This is option (iii) of the `FANFARE` method (see frontpage), where a cumulative sum of the residual load whithin each frequency interval is used to place requirements on the storage capacity for those timescales.
 
 .. code-block:: python
 

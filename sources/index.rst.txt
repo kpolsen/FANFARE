@@ -23,14 +23,14 @@
 Welcome to the documentation of FANFARE!
 ========================================
 
-`FANFARE` stands for 'Fast Assessment Numerical tool for Frequency Analysis of Renewable Energy integration scenarios' and can be applied to power system timeseries data of both real and simulated scenarios. 
+:python:`FANFARE` stands for 'Fast Assessment Numerical tool for Frequency Analysis of Renewable Energy integration scenarios' and can be applied to power system timeseries data of both real and simulated scenarios. 
 
 
 
 Quick example
 -------------
 
-`FANFARE` reads in a timeseries of electricity production from renewable energy sources together with a timeseries of electricity consumption over the same time period. A Fourier analysis of the residual load is used to derive flexibility requirements, such as the integrated energy stored in oscillations of different timescales:
+:python:`FANFARE` reads in a timeseries of electricity production from renewable energy sources together with a timeseries of electricity consumption over the same time period. A Fourier analysis of the residual load is used to derive flexibility requirements, such as the integrated energy stored in oscillations of different timescales:
 
 .. figure:: figures/pie_charts_real.png
    :width: 900px
@@ -47,10 +47,10 @@ The purpose of this code, is to quantify the need for flexibility in a system wi
    :width: 600px
    :align: center
 
-In order to disentangle the residual load on different timescales, `FANFARE` adopts a Discrete Fourier Transform (DFT) analysis. This has often been done before in power system analysis - see for instance `Arrigo et al. 2017 <https://www.tib.eu/en/search/id/ieee%3Adoi~10.1109%252FISGTEurope.2017.8260312/Fourier-transform-based-procedure-for-investigations/>`_, `Oh 2018 <https://www.sciencedirect.com/science/article/pii/S0960148117309904>`_, `Heggarty et al. 2019 <https://www.sciencedirect.com/science/article/pii/S0306261919302107>`_.
+In order to disentangle the residual load on different timescales, :python:`FANFARE` adopts a Discrete Fourier Transform (DFT) analysis. This has often been done before in power system analysis - see for instance `Arrigo et al. 2017 <https://www.tib.eu/en/search/id/ieee%3Adoi~10.1109%252FISGTEurope.2017.8260312/Fourier-transform-based-procedure-for-investigations/>`_, `Oh 2018 <https://www.sciencedirect.com/science/article/pii/S0960148117309904>`_, `Heggarty et al. 2019 <https://www.sciencedirect.com/science/article/pii/S0306261919302107>`_.
 
 
-`FANFARE` consists of a set of methods that can be applied to timeseries data of residual load, in order to study the flexibility requirements on different timescales. 
+:python:`FANFARE` consists of a set of methods that can be applied to timeseries data of residual load, in order to study the flexibility requirements on different timescales. 
 These methods are illustrated in the flow chart below.
 
 .. figure:: figures/flow.png

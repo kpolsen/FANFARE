@@ -6,4 +6,9 @@ Obtaining the code
 
 The most recent release is v1.0.0 which can be downloaded in zip format here:
 
-`windpype on GitHub <https://github.com/kpolsen/fanfare/releases/tag/v1.0.0>`_
+`FANFARE on GitHub <https://github.com/kpolsen/FANFARE/releases/tag/v1.0.0>`_
+
+
+This release of the code has been tested in iPython 6.4.0.
+
+The best way to run the code is via jupyter notebooks, see the Tutorials section.

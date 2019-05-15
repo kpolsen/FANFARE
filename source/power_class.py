@@ -966,10 +966,10 @@ class PowerData():
         int_power           =   np.array(a.int_power)[~np.isnan(a.int_power)]
 
         int_power_perc      =   int_power/np.sum(int_power)*100.
-        pctdistance         =   0.85 - 0.3 * (1.2 - a.radius)
+        pctdistance         =   0.9 - 0.18 * (1.3 - a.radius) # for placing text
         wedges, texts, autotexts = ax1.pie(int_power_perc, radius=a.radius, colors=self.colors, startangle=90, autopct='%1.0f%%', pctdistance=pctdistance,\
             textprops={'fontsize': 14}, wedgeprops={'width':a.width, 'edgecolor':'white', 'lw':3,'alpha':a.alpha}, counterclock=False)
-        plt.setp(autotexts, size=14, weight="bold")
+        plt.setp(autotexts, size=18)#, weight="bold")
         if a.legend: plt.legend(wedges[::-1], self.labels[::-1], loc="best")
         if a.fig_name: plt.savefig(d_plot+a.fig_name+'.png', format='png', dpi=300)
 

@@ -103,7 +103,6 @@ class PowerData():
 
             if self.data_type == 'energinet':
 
-                # url = 'https://api.energidataservice.dk/datastore_search?resource_id=electricitybalance&limit=%s' % a.line_limit
                 url = 'https://api.energidataservice.dk/datastore_search_sql?sql=SELECT * from "electricitybalance" order by "HourUTC" desc LIMIT %s' % a.line_limit
                 print('Downloading Electricity Balance data from energidataservice.dk - this may take a while')
                 urlData = requests.get(url).content.decode('utf-8') # this step may take a while

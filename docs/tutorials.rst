@@ -64,9 +64,9 @@ This is option (iii) of the :python:`FANFARE` method (see frontpage), where a cu
 .. code-block:: python
 
    Capacity requirements:
-   For frequency cut #0: 1.89e+00 GWh
-   For frequency cut #1: 2.11e+01 GWh
-   For frequency cut #2: 1.18e+02 GWh
-   For frequency cut #3: 4.20e+02 GWh
-   For frequency cut #4: 8.27e+02 GWh
+   For frequency cut 0: 1.89e+00 GWh
+   For frequency cut 1: 2.11e+01 GWh
+   For frequency cut 2: 1.18e+02 GWh
+   For frequency cut 3: 4.20e+02 GWh
+   For frequency cut 4: 8.27e+02 GWh
 

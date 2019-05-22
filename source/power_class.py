@@ -103,18 +103,21 @@ class PowerData():
 
             if self.data_type == 'energinet':
 
-                url = 'https://api.energidataservice.dk/datastore_search?resource_id=electricitybalance&limit=%s' % a.line_limit
+                # url = 'https://api.energidataservice.dk/datastore_search?resource_id=electricitybalance&limit=%s' % a.line_limit
+                url = 'https://api.energidataservice.dk/datastore_search_sql?sql=SELECT * from "electricitybalance" order by "HourUTC" desc LIMIT %s' % a.line_limit
                 print('Downloading Electricity Balance data from energidataservice.dk - this may take a while')
                 urlData = requests.get(url).content.decode('utf-8') # this step may take a while
                 data_dict = json.loads(urlData)['result']['records']
                 data_df = pd.DataFrame(data_dict)[['PriceArea','HourDK','GrossCon','OffshoreWindPower','OnshoreWindPower','SolarPowerProd']]
+                data_df.fillna(value=0, inplace=True) # Replace None and NaNs with 0
                 data_df['WindPowerProd'] = data_df['OffshoreWindPower'] + data_df['OnshoreWindPower']
                 data_df = data_df.drop(['OffshoreWindPower','OnshoreWindPower'],axis=1)
                 data_df = data_df.rename(columns={'HourDK':'datetime'}).sort_values(by=['datetime']).reset_index(drop=True)
-                data_df_DK = data_df.groupby(['datetime']).sum()#.drop('PriceArea')
+                data_df_DK = data_df.groupby(['datetime']).sum()
                 data_df_DK_DK1 = data_df_DK.merge(data_df[data_df.PriceArea == 'DK1'].drop('PriceArea',axis=1),on='datetime',suffixes=('_DK','_DK1'),how='outer')
                 data_df_DK_DK2 = data_df_DK.merge(data_df[data_df.PriceArea == 'DK2'].drop('PriceArea',axis=1),on='datetime',suffixes=('_DK','_DK2'),how='outer')
                 data_df = data_df_DK_DK1.merge(data_df_DK_DK2.drop(['GrossCon_DK','WindPowerProd_DK','SolarPowerProd_DK'],axis=1),on='datetime',how='outer').fillna(0)
+                data_df['GrossCon_DK'] = data_df['GrossCon_DK1'] + data_df['GrossCon_DK2']
                 data_df['RenPower_DK'] = data_df['WindPowerProd_DK'] + data_df['SolarPowerProd_DK']
                 data_df['RenPower_DK1'] = data_df['WindPowerProd_DK1'] + data_df['SolarPowerProd_DK1']
                 data_df['RenPower_DK2'] = data_df['WindPowerProd_DK2'] + data_df['SolarPowerProd_DK2']

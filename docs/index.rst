@@ -10,6 +10,7 @@
    Overview <self>
    FANFARE module <fanfare>
    Obtaining the code <release>
+   Requirements <reqs>
    Tutorials <tutorials>
 
 .. role:: python(code)

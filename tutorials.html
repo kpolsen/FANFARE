@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tutorials &mdash; FANFARE 1.0.0 documentation</title>
+  <title>Tutorials &mdash; FANFARE  documentation</title>
   
 
   
@@ -17,33 +17,35 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Obtaining the code" href="release.html" /> 
-
-  
-  <script src="static/js/modernizr.min.js"></script>
-
+    <link rel="prev" title="Requirements" href="reqs.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -81,6 +83,7 @@
 <li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fanfare.html">FANFARE module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="release.html">Obtaining the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reqs.html">Requirements</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#creating-a-new-dataset">0. Creating a new dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hourly-share-of-vre-in-dataset">1. Hourly share of VRE in dataset</a></li>
@@ -140,7 +143,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="sources/tutorials.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/tutorials.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -156,12 +159,20 @@
   <div class="section" id="tutorials">
 <h1>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
 <p><code class="code python docutils literal notranslate"><span class="name"><span class="pre">FANFARE</span></span></code> is best run in a jupyter notebook and below are examples of what can be done with the provided notebooks.</p>
+<p>To open and run a tutorial, go to the main directory of <code class="code python docutils literal notranslate"><span class="name"><span class="pre">FANFARE</span></span></code> (where the <a href="#id1"><span class="problematic" id="id2">*</span></a>.ipynb files are) and type</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="go">ipython notebook</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="go">jupyter notebook</span>
+</pre></div>
+</div>
 <div class="section" id="creating-a-new-dataset">
 <h2>0. Creating a new dataset<a class="headerlink" href="#creating-a-new-dataset" title="Permalink to this headline">¶</a></h2>
 <p>See the notebook <code class="code python docutils literal notranslate"><span class="name"><span class="pre">Tutorial</span></span> <span class="literal number integer"><span class="pre">0</span></span> <span class="operator"><span class="pre">-</span></span> <span class="name"><span class="pre">Creating</span></span> <span class="name"><span class="pre">a</span></span> <span class="name"><span class="pre">new</span></span> <span class="name"><span class="pre">dataset</span></span><span class="operator"><span class="pre">.</span></span><span class="name"><span class="pre">ipynb</span></span></code></p>
 <p>By going through the steps in this notebook, you should be able to generate the following plot with data from energidataservice.dk (Energinet data):</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="images/timeseries.png"><img alt="images/timeseries.png" src="images/timeseries.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="_images/timeseries.png"><img alt="_images/timeseries.png" src="_images/timeseries.png" style="width: 700px;" /></a>
 </div>
 </div>
 <div class="section" id="hourly-share-of-vre-in-dataset">
@@ -170,7 +181,7 @@
 <p>In this notebook, the hourly share of VRE is calculated for a specified region.
 After calculating the VRE share, a histogram can be created to compare different regions:</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="images/VRE_hourly_share.png"><img alt="images/VRE_hourly_share.png" src="images/VRE_hourly_share.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="_images/VRE_hourly_share.png"><img alt="_images/VRE_hourly_share.png" src="_images/VRE_hourly_share.png" style="width: 700px;" /></a>
 </div>
 </div>
 <div class="section" id="i-oscillation-analysis-of-residual-load">
@@ -180,7 +191,7 @@ After calculating the VRE share, a histogram can be created to compare different
 and the resulting iDFTs of each interval is integrated.
 In this notebook, you get to chose the frequency intervals of interest and make a pie chart displaying the energy stored in each interval:</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="images/pie_chart_DK.png"><img alt="images/pie_chart_DK.png" src="images/pie_chart_DK.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="_images/pie_chart_DK.png"><img alt="_images/pie_chart_DK.png" src="_images/pie_chart_DK.png" style="width: 800px;" /></a>
 </div>
 </div>
 <div class="section" id="ii-power-requirements-from-dft-analysis">
@@ -188,7 +199,7 @@ In this notebook, you get to chose the frequency intervals of interest and make 
 <p>See the notebook <code class="code python docutils literal notranslate"><span class="name"><span class="pre">Tutorial</span></span> <span class="literal number integer"><span class="pre">3</span></span> <span class="operator"><span class="pre">-</span></span>&#160; <span class="name"><span class="pre">ii</span></span><span class="punctuation"><span class="pre">)</span></span> <span class="name"><span class="pre">Power</span></span> <span class="name"><span class="pre">requirements</span></span> <span class="keyword namespace"><span class="pre">from</span></span> <span class="name namespace"><span class="pre">DFT</span></span> <span class="name namespace"><span class="pre">analysis.ipynb</span></span></code></p>
 <p>This is option (ii) of the <code class="code python docutils literal notranslate"><span class="name"><span class="pre">FANFARE</span></span></code> method (see frontpage), where the spread in residual load whithin each frequency interval is investigated.</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="images/power_req_DK_2018.png"><img alt="images/power_req_DK_2018.png" src="images/power_req_DK_2018.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="_images/power_req_DK_2018.png"><img alt="_images/power_req_DK_2018.png" src="_images/power_req_DK_2018.png" style="width: 700px;" /></a>
 </div>
 </div>
 <div class="section" id="iii-storage-capacity-requirements-from-dft-analysis">
@@ -215,7 +226,7 @@ In this notebook, you get to chose the frequency intervals of interest and make 
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="release.html" class="btn btn-neutral" title="Obtaining the code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="reqs.html" class="btn btn-neutral float-left" title="Requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -224,7 +235,7 @@ In this notebook, you get to chose the frequency intervals of interest and make 
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Karen Pardos Olsen.
+        &copy; Copyright 2019, Karen Pardos Olsen
 
     </p>
   </div>
@@ -241,33 +252,16 @@ In this notebook, you get to chose the frequency intervals of interest and make 
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.0.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="static/jquery.js"></script>
-      <script type="text/javascript" src="static/underscore.js"></script>
-      <script type="text/javascript" src="static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

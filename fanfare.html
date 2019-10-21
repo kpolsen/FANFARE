@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>FANFARE main module &mdash; FANFARE 1.0.0 documentation</title>
+  <title>FANFARE main module &mdash; FANFARE  documentation</title>
   
 
   
@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Obtaining the code" href="release.html" />
     <link rel="prev" title="Welcome to the documentation of FANFARE!" href="index.html" /> 
-
-  
-  <script src="static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -86,6 +88,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="release.html">Obtaining the code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reqs.html">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
 </ul>
 
@@ -138,7 +141,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="sources/fanfare.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/fanfare.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -155,319 +158,273 @@
 <h1>FANFARE main module<a class="headerlink" href="#fanfare-main-module" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="module-source.power_class">
 <span id="power-class-submodule"></span><h2>power_class submodule<a class="headerlink" href="#module-source.power_class" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="source.power_class.d_plot">
+<code class="sig-prename descclassname">source.power_class.</code><code class="sig-name descname">d_plot</code><em class="property"> = 'plots/'</em><a class="headerlink" href="#source.power_class.d_plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="class">
 <dt id="source.power_class.PowerData">
-<em class="property">class </em><code class="descclassname">source.power_class.</code><code class="descname">PowerData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class defines an object that contains the hourly power system timeseries data to be used</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>data_type</strong> (<em>str/bool</em>) – type of data, ‘energinet’ for loading Energinet data, default : False</li>
-<li><strong>load</strong> (<em>bool</em>) – if True, load data previously stored as pandas dataframe, if False, download data from url site, default : False</li>
-<li><strong>year</strong> (<em>str/bool</em>) – year to cut out of data, default: False</li>
-<li><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</li>
-<li><strong>d_data</strong> (<em>str</em>) – path to where data will be stored, default: ‘data/’</li>
-<li><strong>file_name</strong> (<em>str/bool</em>) – file name used to load/save dataset as pandas dataframe, default: False</li>
-<li><strong>line_limit</strong> (<em>int</em>) – max number of lines to read from url site, default: 5</li>
+<em class="property">class </em><code class="sig-prename descclassname">source.power_class.</code><code class="sig-name descname">PowerData</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class defines an object that contains the hourly power system timeseries data to be used</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_type</strong> (<em>str/bool</em>) – type of data, ‘energinet’ for loading Energinet data, default : False</p></li>
+<li><p><strong>load</strong> (<em>bool</em>) – if True, load data previously stored as pandas dataframe, if False, download data from url site, default : False</p></li>
+<li><p><strong>year</strong> (<em>str/bool</em>) – year to cut out of data, default: False</p></li>
+<li><p><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</p></li>
+<li><p><strong>d_data</strong> (<em>str</em>) – path to where data will be stored, default: ‘data/’</p></li>
+<li><p><strong>file_name</strong> (<em>str/bool</em>) – file name used to load/save dataset as pandas dataframe, default: False</p></li>
+<li><p><strong>line_limit</strong> (<em>int</em>) – max number of lines to read from url site, default: 5</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <dl class="method">
 <dt id="source.power_class.PowerData.info">
-<code class="descname">info</code><span class="sig-paren">(</span><em>verbose=True</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">info</code><span class="sig-paren">(</span><em class="sig-param">verbose=True</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Prints basic info about this dataset.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.AddHighPenetrationIndex">
-<code class="descname">AddHighPenetrationIndex</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.AddHighPenetrationIndex" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">AddHighPenetrationIndex</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.AddHighPenetrationIndex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add index to separate high wind penetration from low</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>alpha_cuts</strong> (<em>list/bool</em>) – min and max VRE hourly share, used to print diagnostics of data, default: False</li>
-<li><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</li>
-<li><strong>power_name</strong> (<em>str/bool</em>) – name of the column containing power data to use, default: False</li>
-<li><strong>load_name</strong> (<em>str/bool</em>) – name of the column containing gross electricity consumption data to use, default: False</li>
-<li><strong>overwrite</strong> (<em>bool</em>) – if True, overwrite any previous calculations of VRE hourly share, default: False</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alpha_cuts</strong> (<em>list/bool</em>) – min and max VRE hourly share, used to print diagnostics of data, default: False</p></li>
+<li><p><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</p></li>
+<li><p><strong>power_name</strong> (<em>str/bool</em>) – name of the column containing power data to use, default: False</p></li>
+<li><p><strong>load_name</strong> (<em>str/bool</em>) – name of the column containing gross electricity consumption data to use, default: False</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – if True, overwrite any previous calculations of VRE hourly share, default: False</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.AddPenetrationFraction">
-<code class="descname">AddPenetrationFraction</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.AddPenetrationFraction" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">AddPenetrationFraction</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.AddPenetrationFraction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates wind penetration in percent of total consumption, and adds result in dataframe.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</li>
-<li><strong>power_names</strong> (<em>list</em>) – names of the columns containing power data to use, default: []</li>
-<li><strong>load_names</strong> (<em>list</em>) – names of the columns containing gross electricity consumption data to use, default: []</li>
-<li><strong>yearly</strong> (<em>bool</em>) – if True, calculate annual VRE penetration instead of VRE hourly share, default: False</li>
-<li><strong>time_cut</strong> – start and endtime in np.datetime64-readable format, default: False</li>
-<li><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</p></li>
+<li><p><strong>power_names</strong> (<em>list</em>) – names of the columns containing power data to use, default: []</p></li>
+<li><p><strong>load_names</strong> (<em>list</em>) – names of the columns containing gross electricity consumption data to use, default: []</p></li>
+<li><p><strong>yearly</strong> (<em>bool</em>) – if True, calculate annual VRE penetration instead of VRE hourly share, default: False</p></li>
+<li><p><strong>time_cut</strong> – start and endtime in np.datetime64-readable format, default: False</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.SetFrequencySetup">
-<code class="descname">SetFrequencySetup</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.SetFrequencySetup" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">SetFrequencySetup</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.SetFrequencySetup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Derive frequency intervals. this method will add frequency cut information, color-coding and labels as attributes to data object.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>duration_cuts</strong> (<em>list/bool</em>) – list of duration cuts (each a 2-element list) in hours, default: False</li>
-<li><strong>labels</strong> (<em>list</em>) – list of labels to describe the timescales, default: False</li>
-<li><strong>labels_verbose</strong> (<em>list</em>) – list of more verbose labels to use in plots etc, default: False</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>duration_cuts</strong> (<em>list/bool</em>) – list of duration cuts (each a 2-element list) in hours, default: False</p></li>
+<li><p><strong>labels</strong> (<em>list</em>) – list of labels to describe the timescales, default: False</p></li>
+<li><p><strong>labels_verbose</strong> (<em>list</em>) – list of more verbose labels to use in plots etc, default: False</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.GetFluctuations">
-<code class="descname">GetFluctuations</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.GetFluctuations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GetFluctuations</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.GetFluctuations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates durations and integrated energy of fluctuations within given epoch, returns in dictionary</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>col_name</strong> (<em>str/bool</em>) – name of the column containing data to use, default: False</li>
-<li><strong>season</strong> (<em>str/bool</em>) – can be ‘summer’ or ‘winter’, default: False</li>
-<li><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</li>
-<li><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</li>
-<li><strong>overwrite</strong> (<em>bool</em>) – if True, overwrite any previous calculations of VRE hourly share, default: False</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>col_name</strong> (<em>str/bool</em>) – name of the column containing data to use, default: False</p></li>
+<li><p><strong>season</strong> (<em>str/bool</em>) – can be ‘summer’ or ‘winter’, default: False</p></li>
+<li><p><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – if True, overwrite any previous calculations of VRE hourly share, default: False</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.AddFFT">
-<code class="descname">AddFFT</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.AddFFT" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">AddFFT</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.AddFFT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates discrete (fast) Fourier transform (DFT) for wind power and adds as attribute to data object.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>power_name</strong> (<em>str/bool</em>) – name of the column containing power data to use, default: False</li>
-<li><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>power_name</strong> (<em>str/bool</em>) – name of the column containing power data to use, default: False</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.AddiFFT">
-<code class="descname">AddiFFT</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.AddiFFT" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">AddiFFT</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.AddiFFT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates inverse Fast Fourier Transform (iFFT) for dataframe data_df
 and inserts it back into dataframe data_df.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>power_name</strong> (<em>str/bool</em>) – name of the column containing power data to use, default: False</li>
-<li><strong>freq_cut</strong> (<em>list</em>) – list of frequency cuts to use in Hz, default: [False]</li>
-<li><strong>freq_cut_number</strong> (<em>int/bool</em>) – actual frequency cut number to use in self.freq_cuts: False</li>
-<li><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</li>
-<li><strong>overwrite</strong> (<em>bool</em>) – if True, overwrite any previous calculations of DFT, default: False</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>power_name</strong> (<em>str/bool</em>) – name of the column containing power data to use, default: False</p></li>
+<li><p><strong>freq_cut</strong> (<em>list</em>) – list of frequency cuts to use in Hz, default: [False]</p></li>
+<li><p><strong>freq_cut_number</strong> (<em>int/bool</em>) – actual frequency cut number to use in self.freq_cuts: False</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – if True, overwrite any previous calculations of DFT, default: False</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.GetPowerReqFromiFFT">
-<code class="descname">GetPowerReqFromiFFT</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.GetPowerReqFromiFFT" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GetPowerReqFromiFFT</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.GetPowerReqFromiFFT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Derive power requirements from iDFTs of different frequency intervals, and return as matrix.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>col_names</strong> (<em>list</em>) – names of the columns containing residual load data to use, default: []</li>
-<li><strong>freq_cut_numbers</strong> (<em>list</em>) – list of frequency cut numbers to use in self.freq_cuts: []</li>
-<li><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</li>
-<li><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>col_names</strong> (<em>list</em>) – names of the columns containing residual load data to use, default: []</p></li>
+<li><p><strong>freq_cut_numbers</strong> (<em>list</em>) – list of frequency cut numbers to use in self.freq_cuts: []</p></li>
+<li><p><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.GetCapacityReq">
-<code class="descname">GetCapacityReq</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.GetCapacityReq" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">GetCapacityReq</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.GetCapacityReq" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate storage capacity needs based on accumulated sum of energy</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>col_name</strong> (<em>str</em>) – name of the column containing residual load data to use, default: False</li>
-<li><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</li>
-<li><strong>plot</strong> (<em>bool</em>) – if True, plot the capacity requirements as function of frequency interval, default: False</li>
-<li><strong>legend</strong> (<em>bool</em>) – if True, add legend to plot, default: False</li>
-<li><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>col_name</strong> (<em>str</em>) – name of the column containing residual load data to use, default: False</p></li>
+<li><p><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</p></li>
+<li><p><strong>plot</strong> (<em>bool</em>) – if True, plot the capacity requirements as function of frequency interval, default: False</p></li>
+<li><p><strong>legend</strong> (<em>bool</em>) – if True, add legend to plot, default: False</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – if True, print some status updates, default: False</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.PlotHisto">
-<code class="descname">PlotHisto</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotHisto" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">PlotHisto</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotHisto" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot histogram of an attribute, a column in the dataframe or a supplied data array.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>histogram_values</strong> (<em>list</em>) – list of attributes or column names in data object to make a histogram of, default: []</li>
-<li><strong>data</strong> (<em>list/numpy array / bool</em>) – option to supply data that is not in datao bject, default: False</li>
-<li><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</li>
-<li><strong>bins</strong> (<em>int</em>) – number of bins in histogram, default: 200</li>
-<li><strong>max_val</strong> (<em>int/float</em>) – max value allowed in data, default: 1000</li>
-<li><strong>remove_zeros</strong> (<em>bool</em>) – if True, remove zeros from histogram values before calculating histogram, default: False</li>
-<li><strong>log</strong> (<em>bool</em>) – if True, take logarithm of values before calculating histogram, default: False</li>
-<li><strong>ylog</strong> (<em>bool</em>) – if True, convert y axis to logarithmic, default: False</li>
-<li><strong>labels</strong> (<em>list</em>) – list of labels to describe the histograms, default: False</li>
-<li><strong>colors</strong> (<em>list</em>) – list of colors to plot the histograms, default: [‘b’]</li>
-<li><strong>ls</strong> (<em>list</em>) – list of linestyles to plot the histograms, default: [‘-‘]</li>
-<li><strong>alpha</strong> (<em>int/float</em>) – transparency index used to plot the histograms, default: 1</li>
-<li><strong>xlim</strong> (<em>list/bool</em>) – limits in x axis of plot, default: False</li>
-<li><strong>ylim</strong> (<em>list/bool</em>) – limits in y axis of plot, default: False</li>
-<li><strong>xlab</strong> (<em>str</em>) – x axis title, default: ‘’</li>
-<li><strong>ylab</strong> (<em>str</em>) – y axis title, default: ‘ower [MW]’</li>
-<li><strong>add</strong> (<em>bool</em>) – if True, add to existing axis object, default: False</li>
-<li><strong>legend</strong> (<em>bool</em>) – if True, add legend to plot, default: False</li>
-<li><strong>histo_counts</strong> (<em>bool</em>) – if True, plot counts on y axis otherwise percentages, default: False</li>
-<li><strong>fig_name</strong> (<em>str/bool</em>) – if True, save plot figure with this filename, in d_plot (see top), default: False</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>histogram_values</strong> (<em>list</em>) – list of attributes or column names in data object to make a histogram of, default: []</p></li>
+<li><p><strong>data</strong> (<em>list/numpy array / bool</em>) – option to supply data that is not in datao bject, default: False</p></li>
+<li><p><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</p></li>
+<li><p><strong>bins</strong> (<em>int</em>) – number of bins in histogram, default: 200</p></li>
+<li><p><strong>max_val</strong> (<em>int/float</em>) – max value allowed in data, default: 1000</p></li>
+<li><p><strong>remove_zeros</strong> (<em>bool</em>) – if True, remove zeros from histogram values before calculating histogram, default: False</p></li>
+<li><p><strong>log</strong> (<em>bool</em>) – if True, take logarithm of values before calculating histogram, default: False</p></li>
+<li><p><strong>ylog</strong> (<em>bool</em>) – if True, convert y axis to logarithmic, default: False</p></li>
+<li><p><strong>labels</strong> (<em>list</em>) – list of labels to describe the histograms, default: False</p></li>
+<li><p><strong>colors</strong> (<em>list</em>) – list of colors to plot the histograms, default: [‘b’]</p></li>
+<li><p><strong>ls</strong> (<em>list</em>) – list of linestyles to plot the histograms, default: [‘-‘]</p></li>
+<li><p><strong>alpha</strong> (<em>int/float</em>) – transparency index used to plot the histograms, default: 1</p></li>
+<li><p><strong>xlim</strong> (<em>list/bool</em>) – limits in x axis of plot, default: False</p></li>
+<li><p><strong>ylim</strong> (<em>list/bool</em>) – limits in y axis of plot, default: False</p></li>
+<li><p><strong>xlab</strong> (<em>str</em>) – x axis title, default: ‘’</p></li>
+<li><p><strong>ylab</strong> (<em>str</em>) – y axis title, default: ‘ower [MW]’</p></li>
+<li><p><strong>add</strong> (<em>bool</em>) – if True, add to existing axis object, default: False</p></li>
+<li><p><strong>legend</strong> (<em>bool</em>) – if True, add legend to plot, default: False</p></li>
+<li><p><strong>histo_counts</strong> (<em>bool</em>) – if True, plot counts on y axis otherwise percentages, default: False</p></li>
+<li><p><strong>fig_name</strong> (<em>str/bool</em>) – if True, save plot figure with this filename, in d_plot (see top), default: False</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.PlotPie">
-<code class="descname">PlotPie</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotPie" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">PlotPie</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotPie" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make pie chart of integrated power fractions.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>int_power</strong> (<em>list / numpy array</em>) – array of integrated power in different frequency intervals, default: False</li>
-<li><strong>add</strong> (<em>bool</em>) – if True, add to existing axis object, default: False</li>
-<li><strong>legend</strong> (<em>bool</em>) – if True, add legend to plot, default: False</li>
-<li><strong>alpha</strong> (<em>int/float</em>) – transparency index used to plot the histograms, default: 1</li>
-<li><strong>radius</strong> (<em>int/float</em>) – outer radius of pie chart, default: 1</li>
-<li><strong>width</strong> (<em>int/float</em>) – width of pie chart (allowing for ‘donuts’), default: 1</li>
-<li><strong>fig_name</strong> (<em>str/bool</em>) – if True, save plot figure with this filename, in d_plot (see top), default: False</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>int_power</strong> (<em>list / numpy array</em>) – array of integrated power in different frequency intervals, default: False</p></li>
+<li><p><strong>add</strong> (<em>bool</em>) – if True, add to existing axis object, default: False</p></li>
+<li><p><strong>legend</strong> (<em>bool</em>) – if True, add legend to plot, default: False</p></li>
+<li><p><strong>alpha</strong> (<em>int/float</em>) – transparency index used to plot the histograms, default: 1</p></li>
+<li><p><strong>radius</strong> (<em>int/float</em>) – outer radius of pie chart, default: 1</p></li>
+<li><p><strong>width</strong> (<em>int/float</em>) – width of pie chart (allowing for ‘donuts’), default: 1</p></li>
+<li><p><strong>fig_name</strong> (<em>str/bool</em>) – if True, save plot figure with this filename, in d_plot (see top), default: False</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.PlotTimeSeries">
-<code class="descname">PlotTimeSeries</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotTimeSeries" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">PlotTimeSeries</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotTimeSeries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plots time series of data for specific time period (all times by default).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>col_names</strong> (<em>list</em>) – names of the columns containing residual load data to use, default: []</li>
-<li><strong>ax</strong> (<em>axis object / bool</em>) – if an axis object is given, timeseries will be plotted on this axis, default: False</li>
-<li><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</li>
-<li><strong>labels</strong> (<em>list</em>) – list of labels to describe the histograms, default: False</li>
-<li><strong>ylim</strong> (<em>list/bool</em>) – limits in y axis of plot, default: False</li>
-<li><strong>ylab</strong> (<em>str</em>) – y axis title, default: ‘ower [MW]’</li>
-<li><strong>alpha</strong> (<em>int/float</em>) – transparency index used to plot the histograms, default: 1</li>
-<li><strong>colors</strong> (<em>list</em>) – list of colors to plot the histograms, default: [‘b’]</li>
-<li><strong>add_shade</strong> (<em>list / bool</em>) – list of colors to optionally add shade under the graphs, default: False</li>
-<li><strong>ls</strong> (<em>list</em>) – list of linestyles to plot the histograms, default: [‘-‘]</li>
-<li><strong>two_axes</strong> (<em>bool</em>) – if True, add a 2nd y axis, default: False</li>
-<li><strong>xlim</strong> (<em>list/bool</em>) – limits in x axis of plot, default: False</li>
-<li><strong>add</strong> (<em>bool</em>) – if True, add to existing axis object, default: False</li>
-<li><strong>legend</strong> (<em>bool</em>) – if True, add legend to plot, default: False</li>
-<li><strong>fig_name</strong> (<em>str/bool</em>) – if True, save plot figure with this filename, in d_plot (see top), default: False</li>
-<li><strong>fig_format</strong> (<em>str</em>) – format of save figure, default: ‘png’</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>col_names</strong> (<em>list</em>) – names of the columns containing residual load data to use, default: []</p></li>
+<li><p><strong>ax</strong> (<em>axis object / bool</em>) – if an axis object is given, timeseries will be plotted on this axis, default: False</p></li>
+<li><p><strong>time_cut</strong> (<em>list/bool</em>) – start and endtime in np.datetime64-readable format, default: False</p></li>
+<li><p><strong>labels</strong> (<em>list</em>) – list of labels to describe the histograms, default: False</p></li>
+<li><p><strong>ylim</strong> (<em>list/bool</em>) – limits in y axis of plot, default: False</p></li>
+<li><p><strong>ylab</strong> (<em>str</em>) – y axis title, default: ‘ower [MW]’</p></li>
+<li><p><strong>alpha</strong> (<em>int/float</em>) – transparency index used to plot the histograms, default: 1</p></li>
+<li><p><strong>colors</strong> (<em>list</em>) – list of colors to plot the histograms, default: [‘b’]</p></li>
+<li><p><strong>add_shade</strong> (<em>list / bool</em>) – list of colors to optionally add shade under the graphs, default: False</p></li>
+<li><p><strong>ls</strong> (<em>list</em>) – list of linestyles to plot the histograms, default: [‘-‘]</p></li>
+<li><p><strong>two_axes</strong> (<em>bool</em>) – if True, add a 2nd y axis, default: False</p></li>
+<li><p><strong>xlim</strong> (<em>list/bool</em>) – limits in x axis of plot, default: False</p></li>
+<li><p><strong>add</strong> (<em>bool</em>) – if True, add to existing axis object, default: False</p></li>
+<li><p><strong>legend</strong> (<em>bool</em>) – if True, add legend to plot, default: False</p></li>
+<li><p><strong>fig_name</strong> (<em>str/bool</em>) – if True, save plot figure with this filename, in d_plot (see top), default: False</p></li>
+<li><p><strong>fig_format</strong> (<em>str</em>) – format of save figure, default: ‘png’</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="source.power_class.PowerData.PlotPowerReqFromiFFT">
-<code class="descname">PlotPowerReqFromiFFT</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotPowerReqFromiFFT" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">PlotPowerReqFromiFFT</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#source.power_class.PowerData.PlotPowerReqFromiFFT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot power requirements from iDFTs on different frequency intervals</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>matrices</strong> (<em>numpy array / bool</em>) – data to plot = output from GetPowerReqFromiFFT(), default: False</li>
-<li><strong>col_names</strong> (<em>list</em>) – names of the columns containing residual load data to use, default: []</li>
-<li><strong>freq_cut_number</strong> (<em>int/bool</em>) – actual frequency cut number to use in self.freq_cuts: False</li>
-<li><strong>yearly</strong> (<em>bool</em>) – if True, plot years on x axis, default: False</li>
-<li><strong>width</strong> (<em>int/float</em>) – width of each box, default: 1</li>
-<li><strong>offset</strong> (<em>int/float</em>) – offset from integer numbers of first box, default: 10</li>
-<li><strong>labels</strong> (<em>list</em>) – list of labels to describe the histograms, default: False</li>
-<li><strong>colors</strong> (<em>list</em>) – list of colors to plot the histograms, default: [‘b’]</li>
-<li><strong>ls</strong> (<em>list</em>) – list of linestyles to plot the histograms, default: [‘-‘]</li>
-<li><strong>xlabels</strong> (<em>list</em>) – list of labels to use on x axis, default: []</li>
-<li><strong>xlim</strong> (<em>list/bool</em>) – limits in x axis of plot, default: False</li>
-<li><strong>ylim</strong> (<em>list/bool</em>) – limits in y axis of plot, default: False</li>
-<li><strong>ylab</strong> (<em>str</em>) – y axis title, default: ‘ower [MW]’</li>
-<li><strong>add</strong> (<em>bool</em>) – if True, add to existing axis object, default: False</li>
-<li><strong>legend</strong> (<em>bool</em>) – if True, add legend to plot, default: False</li>
-<li><strong>fig_name</strong> (<em>str/bool</em>) – if True, save plot figure with this filename, in d_plot (see top), default: False</li>
-<li><strong>fig_format</strong> (<em>str</em>) – format of save figure, default: ‘png’</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>matrices</strong> (<em>numpy array / bool</em>) – data to plot = output from GetPowerReqFromiFFT(), default: False</p></li>
+<li><p><strong>col_names</strong> (<em>list</em>) – names of the columns containing residual load data to use, default: []</p></li>
+<li><p><strong>freq_cut_number</strong> (<em>int/bool</em>) – actual frequency cut number to use in self.freq_cuts: False</p></li>
+<li><p><strong>yearly</strong> (<em>bool</em>) – if True, plot years on x axis, default: False</p></li>
+<li><p><strong>width</strong> (<em>int/float</em>) – width of each box, default: 1</p></li>
+<li><p><strong>offset</strong> (<em>int/float</em>) – offset from integer numbers of first box, default: 10</p></li>
+<li><p><strong>labels</strong> (<em>list</em>) – list of labels to describe the histograms, default: False</p></li>
+<li><p><strong>colors</strong> (<em>list</em>) – list of colors to plot the histograms, default: [‘b’]</p></li>
+<li><p><strong>ls</strong> (<em>list</em>) – list of linestyles to plot the histograms, default: [‘-‘]</p></li>
+<li><p><strong>xlabels</strong> (<em>list</em>) – list of labels to use on x axis, default: []</p></li>
+<li><p><strong>xlim</strong> (<em>list/bool</em>) – limits in x axis of plot, default: False</p></li>
+<li><p><strong>ylim</strong> (<em>list/bool</em>) – limits in y axis of plot, default: False</p></li>
+<li><p><strong>ylab</strong> (<em>str</em>) – y axis title, default: ‘ower [MW]’</p></li>
+<li><p><strong>add</strong> (<em>bool</em>) – if True, add to existing axis object, default: False</p></li>
+<li><p><strong>legend</strong> (<em>bool</em>) – if True, add legend to plot, default: False</p></li>
+<li><p><strong>fig_name</strong> (<em>str/bool</em>) – if True, save plot figure with this filename, in d_plot (see top), default: False</p></li>
+<li><p><strong>fig_format</strong> (<em>str</em>) – format of save figure, default: ‘png’</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -477,26 +434,22 @@ and inserts it back into dataframe data_df.</p>
 <span id="aux-submodule"></span><h2>aux submodule<a class="headerlink" href="#module-source.aux" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="source.aux.handle_args">
-<code class="descclassname">source.aux.</code><code class="descname">handle_args</code><span class="sig-paren">(</span><em>kwargs</em>, <em>argkeys_needed</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#source.aux.handle_args" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">source.aux.</code><code class="sig-name descname">handle_args</code><span class="sig-paren">(</span><em class="sig-param">kwargs</em>, <em class="sig-param">argkeys_needed</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#source.aux.handle_args" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make custom namespace containing the relevant parameters for a specific method</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>kwargs</strong> (<em>dictionary</em>) – keyword arguments supplied to the function by the user</li>
-<li><strong>args_needed</strong> (<em>dictionary</em>) – arguments needed by the function</li>
-<li><strong>verbose</strong> (<em>bool</em>) – if True, print which arguments were not supplied by user and have been replaced by default value, default: False</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – keyword arguments supplied to the function by the user</p></li>
+<li><p><strong>args_needed</strong> (<em>dictionary</em>) – arguments needed by the function</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – if True, print which arguments were not supplied by user and have been replaced by default value, default: False</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="source.aux.pretty_label">
-<code class="descclassname">source.aux.</code><code class="descname">pretty_label</code><span class="sig-paren">(</span><em>name</em>, <em>percent=False</em><span class="sig-paren">)</span><a class="headerlink" href="#source.aux.pretty_label" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">source.aux.</code><code class="sig-name descname">pretty_label</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">percent=False</em><span class="sig-paren">)</span><a class="headerlink" href="#source.aux.pretty_label" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a pretty label for plotting etc. for given column name.</p>
 </dd></dl>
 
@@ -514,7 +467,7 @@ and inserts it back into dataframe data_df.</p>
         <a href="release.html" class="btn btn-neutral float-right" title="Obtaining the code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Welcome to the documentation of FANFARE!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the documentation of FANFARE!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -523,7 +476,7 @@ and inserts it back into dataframe data_df.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Karen Pardos Olsen.
+        &copy; Copyright 2019, Karen Pardos Olsen
 
     </p>
   </div>
@@ -540,33 +493,16 @@ and inserts it back into dataframe data_df.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.0.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="static/jquery.js"></script>
-      <script type="text/javascript" src="static/underscore.js"></script>
-      <script type="text/javascript" src="static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  <script type="text/javascript" src="static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

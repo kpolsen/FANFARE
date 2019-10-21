@@ -1199,7 +1199,7 @@ class PowerData():
                     whiskerprops = dict(linestyle='-', linewidth=2, color=a.colors[i])
                     capprops = dict(linestyle='-', linewidth=1.5, color=a.colors[i])
                     ax1.boxplot(iFFT_matrix[a.freq_cut_number,:],positions=[j+1+offset+width+i*width],widths=width,\
-                        medianprops=medianprops,boxprops=boxprops,whiskerprops=whiskerprops,capprops=capprops)
+                        medianprops=medianprops,boxprops=boxprops,whiskerprops=whiskerprops,capprops=capprops,whis='range')
         else:
             for i,iFFT_matrix in enumerate(a.matrices):
                 medianprops = dict(linestyle='-', linewidth=2, color=a.colors[i])
@@ -1207,9 +1207,9 @@ class PowerData():
                 whiskerprops = dict(linestyle=ls[i], linewidth=2, color=a.colors[i])
                 capprops = dict(linestyle='-', linewidth=1.5, color=a.colors[i])
                 if len(a.col_names) > 1: ax1.boxplot(iFFT_matrix[i,:,:].T,positions=np.arange(len(self.freq_cuts))+1+offset+width+i*width,widths=width,\
-                    medianprops=medianprops,boxprops=boxprops,whiskerprops=whiskerprops,capprops=capprops)
+                    medianprops=medianprops,boxprops=boxprops,whiskerprops=whiskerprops,capprops=capprops,whis='range')
                 if len(a.col_names) == 1: ax1.boxplot(iFFT_matrix.T,positions=np.arange(len(self.freq_cuts))+1+offset+width+i*width,widths=width,\
-                    medianprops=medianprops,boxprops=boxprops,whiskerprops=whiskerprops,capprops=capprops)
+                    medianprops=medianprops,boxprops=boxprops,whiskerprops=whiskerprops,capprops=capprops,whis='range')
 
         for color,label,ls in zip(self.colors,self.labels,a.ls):
             ax1.plot([-1],[-1],linestyle=ls, linewidth=2,color=color,label=label)

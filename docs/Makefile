@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
-SPHINXBUILD   = /home/karen/code/anaconda2/bin/sphinx-build
+SPHINXBUILD   = /home/karen/code/anaconda3/bin/sphinx-build
 SPHINXPROJ    = FANFARE
 SOURCEDIR     = .
 BUILDDIR      = /home/karen/Projects/EPIMES/python/fanfare-docs

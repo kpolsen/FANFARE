@@ -41,8 +41,9 @@ autodoc_member_order = 'bysource' # do not order anything alphabetically
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinxtogithub','sphinx.ext.autodoc','sphinxcontrib.napoleon','sphinx.ext.mathjax',
+    'sphinx.ext.autodoc','sphinx.ext.napoleon','sphinx.ext.mathjax',
 ]
+    # 'sphinxtogithub','sphinx.ext.autodoc','sphinxcontrib.napoleon','sphinx.ext.mathjax',
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

@@ -6,8 +6,16 @@ Tutorials
 :python:`FANFARE` is best run in a jupyter notebook and below are examples of what can be done with the provided notebooks.
 
 To open and run a tutorial, go to the main directory of :python:`FANFARE` (where the *.ipynb files are) and type
-``` ipython notebook``` or
-``` jupyter notebook```
+
+.. code-block:: shell-session
+
+   ipython notebook
+
+or 
+
+.. code-block:: shell-session
+
+   jupyter notebook
 
 0. Creating a new dataset
 -------------------------
